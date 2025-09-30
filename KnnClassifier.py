@@ -15,10 +15,10 @@ class KnnClassifier:
 
     def cal_distance(self, input_img: torch.Tensor) -> torch.Tensor:
         input_img = input_img.flatten()
-        result_tensor = torch.norm(self.img_train - input_img, p = 2, dim = 0)
+        result_tensor = torch.norm(self.img_train - input_img, p = 2, dim = 1)
         return result_tensor
 
-    def candidate_5(self, result: torch.Tensor) -> torch.Tensor:
+    def candidate(self, result: torch.Tensor) -> torch.Tensor:
         cand_idx = torch.topk(result,k = self.k_num,largest = False).indices
         return cand_idx
 
