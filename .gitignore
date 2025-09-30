@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# 가상환경
+.env/
+.venv/
+venv/
+ENV/
+env/
+
+# 데이터셋 & 모델
+data/
+*.tar.gz
+*.pt
+*.pth
+cifar-10-batches-py/
