@@ -4,10 +4,12 @@ from data_download import img_train
 
 
 class KnnClassifier:
-    def __init__(self, k_num : int) -> None:
+    def __init__(self, k_num : int, device) -> None:
         self.k_num = k_num
+        self.device = device
         self.img_train = None
         self.label_train = None
+
 
     def data_upload(self, dataset: torch.Tensor) -> None:
         self.img_train = torch.stack([img.flatten() for img, _ in dataset])
